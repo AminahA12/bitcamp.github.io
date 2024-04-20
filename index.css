@@ -3,13 +3,13 @@ body{
   font-family: "Times New Roman", Times, serif;
 }
 
-div {
+.map1 {
   padding-right: 100px;
   padding-left: 100px;
 }
 
 .navbar {
   float: left;
-  color: rbg(0, 0, 0);
+  background-color: rbg(0, 0, 0);
   text-align: center;
 }
