@@ -13,6 +13,9 @@
 
 }
 
+::placeholder {
+  color: var(--dark);
+}
 .bigtext {
   font-family: "Bebas Neue", sans-serif;
   text-align: center;
@@ -21,8 +24,7 @@
 }
 
 div {
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-left: 25px;
 }
 
 .map {
@@ -58,6 +60,7 @@ body{
 }
 
 .header input[type='text'] {
+  font-family: "Bebas Neue", sans-serif;
   width: min(400px, 80vw);
   font-size: larger;
   background-color: var(--lighter);
@@ -67,19 +70,27 @@ body{
   padding: 4px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
 }
 
 .header input[type='text']:focus {
-  border: 8px, solid, var(--dark);
+  outline: none;
+  border-color: var(--dark);
+  border-style: solid;
+  border-bottom-left-radius: 0px;
+
 }
 .header button {
-  margin-left: 7px;
+  font-family: "Bebas Neue", sans-serif;
   background-color: var(--light);
   border: none;
   border-radius: 8px;
   transition-property: filter, border;
   transition: .3s cubic-bezier(.34,.01,.62,1.03);
   border: 1px solid var(--lighter);
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
 }
 
 .header button:hover {
@@ -90,7 +101,6 @@ body{
 }
 .autocomplete-items {
   position: absolute;
-  border: 1px solid var(--dark);
   border-bottom: none;
   border-top: none;
   z-index: 99;
@@ -105,6 +115,8 @@ body{
   cursor: pointer;
   background-color: var(--mid);
   border-bottom: 1px solid var(--dark);
+  border-left: 1px solid var(--dark);
+  border-right: 1px solid var(--dark);
 }
 .autocomplete-items div:hover {
   /*when hovering an item:*/

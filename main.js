@@ -28,7 +28,7 @@ function processData(allText) {
     for (var i=0;i<lines.length; i++) {
         categories.push(lines[i][3].split(':')[1])
     }
-    console.log(categories);
+    categories.sort();
     // alert(lines);
 }
 
@@ -51,10 +51,12 @@ function autocomplete(inp, arr) {
         /*append the DIV element as a child of the autocomplete container:*/
         this.parentNode.appendChild(a);
         /*for each item in the array...*/
+        var autocompleted_items = 0
         for (i = 0; i < arr.length; i++) {
           /*check if the item starts with the same letters as the text field value:*/
           if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-            /*create a DIV element for each matching element:*/
+            autocompleted_items++;
+            /*create nb nm a DIV element for each matching element:*/
             b = document.createElement("DIV");
             /*make the matching letters bold:*/
             b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
@@ -70,6 +72,10 @@ function autocomplete(inp, arr) {
                 closeAllLists();
             });
             a.appendChild(b);
+            if (autocompleted_items == 9 || arr[i+1].substr(0, val.length).toUpperCase() != val.toUpperCase()) {
+                b.setAttribute("style", "border-bottom-right-radius:8px; border-bottom-left-radius:8px");
+                break;
+            }
           }
 
         }
@@ -151,6 +157,10 @@ function showAllCategoriesOnClick(inp, arr) {
         categoryList.setAttribute("class", "autocomplete-items");
         for (var i = 0; i < Math.min(arr.length, 10); i++) {
             var listItem = document.createElement("DIV");
+            console.log(i);
+            if (i == Math.min(arr.length, 10) - 1) {
+                listItem.setAttribute("style", "border-bottom-right-radius:8px; border-bottom-left-radius:8px");
+            }
             /*make the matching letters bold:*/
             listItem.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
             listItem.innerHTML += arr[i].substr(val.length);
