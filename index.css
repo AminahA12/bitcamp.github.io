@@ -1,11 +1,33 @@
-body{
-  background-color: #b5ffe1;
-  font-family: "Times New Roman", Times, serif;
+:root {
+
+  --darker: #00171a;
+  --dark: #004346;
+  --mid: #5BA194;
+  --light: #b5ffe1;
+  --lighter: #5ba194;
 }
 
-.map1 {
+.bigtext {
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  font-size: 60px;
+  color: var(--dark);
+}
+
+div {
   padding-right: 100px;
   padding-left: 100px;
+}
+
+.map {
+  padding-right: 500px;
+  padding-left: 500px;
+  padding-top: 500px;
+}
+
+body{
+  background-color: var(--light);
+  font-family: "Times New Roman", Times, serif;
 }
 
 .navbar {
