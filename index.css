@@ -7,6 +7,12 @@
   --lighter: #5ba194;
 }
 
+
+#myInput{
+  color: var(--dark);
+
+}
+
 .bigtext {
   font-family: "Bebas Neue", sans-serif;
   text-align: center;
@@ -36,4 +42,83 @@ body{
   text-align: center;
   padding: 15px 20px;
   font-size: 20px;
+}
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.header input[type='text'] {
+  width: min(400px, 80vw);
+  font-size: larger;
+  background-color: var(--lighter);
+  border-color: var(--darker);
+  border-style: solid;
+  border-radius: 8px;
+  padding: 4px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header input[type='text']:focus {
+  border: 8px, solid, var(--dark);
+}
+.header button {
+  margin-left: 7px;
+  background-color: var(--light);
+  border: none;
+  border-radius: 8px;
+  transition-property: filter, border;
+  transition: .3s cubic-bezier(.34,.01,.62,1.03);
+  border: 1px solid var(--lighter);
+}
+
+.header button:hover {
+  transition: 0.5s cubic-bezier(.34,.01,.62,1.03);
+  transition-property: filter, border;
+  filter: drop-shadow(0 0 3px var(--darker));
+  border: 1px solid var(--darker);
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid var(--dark);
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: var(--mid);
+  border-bottom: 1px solid var(--dark);
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: var(--light);
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: var(--light) !important;
+  color: var(--mid);
+}
+
+.inputs{
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
 }
