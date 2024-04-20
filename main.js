@@ -1,4 +1,37 @@
-var categories = ["Can", "Paper", "Plastic", "Glass", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+var categories = []
+
+$(document).ready(function() {
+    $.ajax({
+        type: "GET",
+        url: "data3.txt",
+        dataType: "text",
+        success: function(data) {processData(data);}
+     });
+});
+
+function processData(allText) {
+    var allTextLines = allText.split(/\r\n|\n/);
+    var headers = allTextLines[0].split(',');
+    var lines = [];
+
+    for (var i=1; i<allTextLines.length; i++) {
+        var data = allTextLines[i].split(',');
+        if (data.length == headers.length) {
+
+            var tarr = [];
+            for (var j=0; j<headers.length; j++) {
+                tarr.push(headers[j]+":"+data[j]);
+            }
+            lines.push(tarr);
+        }
+    }
+    for (var i=0;i<lines.length; i++) {
+        categories.push(lines[i][3].split(':')[1])
+    }
+    console.log(categories);
+    // alert(lines);
+}
+
 
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
@@ -154,3 +187,4 @@ function changePage(inp) {
         }
     });
 }
+
