@@ -1,3 +1,8 @@
 body{
   background-color: #b5ffe1;
 }
+
+div {
+  padding-right: 100px;
+  padding-left: 100px;
+}
