@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,58 +8,82 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="main.js"></script>
-  <p class="bigtext" >Our Page Name</p>
-  <link rel="stylesheet" href="index.css">
+  <div class="navbar">
+    <a class="active" href="#home">Home</a>
+    <a href="#fahd">Federally Assisted Housing Distribution</a>
+    <a href="#hpi">Change In HPI</a>
+    <a href="#hdd">Hurricane Disaster Declarations</a>
+    <a href="#hri">Housing Risk Index</a>
+  </div>
+  <br><br><br><br><br><br>
+  <p class="bigtext">Our Page Name</p>
+  <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
   <div class="header">
     <div class="autocomplete">
-        <input id="myInput" type="text" placeholder="Search Counties">
-        <script>
-            autocomplete(document.getElementById("myInput"), categories);
-            showAllCategoriesOnClick(document.getElementById("myInput"), categories);
-        </script>
+      <input id="myInput" type="text" placeholder="Search Counties">
+      <script>
+        autocomplete(document.getElementById("myInput"), categories);
+        showAllCategoriesOnClick(document.getElementById("myInput"), categories);
+      </script>
     </div>
     <button id="submit">Submit</button>
     <script>changePage(document.getElementById("submit"));</script>
   </div>
-    <div class="side-container">
-      <p class="main-body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis varius quam quisque id diam vel quam elementum. Gravida quis blandit turpis cursus in hac habitasse. Massa eget egestas purus viverra accumsan in nisl nisi. At imperdiet dui accumsan sit amet nulla. Congue eu consequat ac felis donec et. Amet consectetur adipiscing elit duis tristique sollicitudin nibh sit amet. Semper auctor neque vitae tempus quam. Nunc sed id semper risus in hendrerit gravida rutrum. Erat nam at lectus urna duis convallis convallis. Viverra aliquet eget sit amet tellus cras adipiscing enim. Turpis nunc eget lorem dolor sed. Quis auctor elit sed vulputate mi sit. Ultrices gravida dictum fusce ut placerat. Pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Egestas congue quisque egestas diam in arcu cursus euismod quis. Lorem dolor sed viverra ipsum nunc aliquet.
+  <div class="side-container">
+    <p class="main-body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+      ut labore et dolore magna aliqua. Quis varius quam quisque id diam vel quam elementum. Gravida quis blandit turpis
+      cursus in hac habitasse. Massa eget egestas purus viverra accumsan in nisl nisi. At imperdiet dui accumsan sit
+      amet nulla. Congue eu consequat ac felis donec et. Amet consectetur adipiscing elit duis tristique sollicitudin
+      nibh sit amet. Semper auctor neque vitae tempus quam. Nunc sed id semper risus in hendrerit gravida rutrum. Erat
+      nam at lectus urna duis convallis convallis. Viverra aliquet eget sit amet tellus cras adipiscing enim. Turpis
+      nunc eget lorem dolor sed. Quis auctor elit sed vulputate mi sit. Ultrices gravida dictum fusce ut placerat.
+      Pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Egestas congue quisque egestas diam in arcu
+      cursus euismod quis. Lorem dolor sed viverra ipsum nunc aliquet.
 
-        Mattis pellentesque id nibh tortor. In nisl nisi scelerisque eu ultrices vitae. Urna nunc id cursus metus aliquam eleifend. Euismod quis viverra nibh cras. Tristique senectus et netus et malesuada. Nec feugiat nisl pretium fusce id. Blandit turpis cursus in hac habitasse platea. Dolor sit amet consectetur adipiscing elit. Dictum sit amet justo donec enim diam vulputate ut pharetra. Dignissim enim sit amet venenatis urna cursus eget. Vitae congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Turpis massa sed elementum tempus egestas sed sed. Nisi porta lorem mollis aliquam ut. Justo donec enim diam vulputate. Dui id ornare arcu odio ut sem nulla pharetra. Et malesuada fames ac turpis egestas sed. Sit amet venenatis urna cursus eget nunc scelerisque. Quis commodo odio aenean sed. Nisi porta lorem mollis aliquam ut.</p>
-      <div class="map" style="height:100px">
-        <style>
-          .embed-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            border: 1px solid var(--darker); /* Ensure var(--darker) is defined in your CSS or replace with a specific color */
-            border-radius: 20px;
-          }
-        
-          .embed-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 20px;
-          }
-        </style>
-        <div class="embed-container">
-          <iframe
-            src="https://arcgis.com/apps/Embed/index.html?webmap=67c2bbfe845446ada0f5432a19e4aa0f&extent=-168.0768,3.6039,-42.4811,61.6912&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light"
-            frameborder="0"
-            scrolling="no"
-            title="County Risk Indices"
-            allowfullscreen>
-          </iframe>
-        </div>
+      Mattis pellentesque id nibh tortor. In nisl nisi scelerisque eu ultrices vitae. Urna nunc id cursus metus aliquam
+      eleifend. Euismod quis viverra nibh cras. Tristique senectus et netus et malesuada. Nec feugiat nisl pretium fusce
+      id. Blandit turpis cursus in hac habitasse platea. Dolor sit amet consectetur adipiscing elit. Dictum sit amet
+      justo donec enim diam vulputate ut pharetra. Dignissim enim sit amet venenatis urna cursus eget. Vitae congue
+      mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Turpis massa sed elementum tempus egestas sed sed.
+      Nisi porta lorem mollis aliquam ut. Justo donec enim diam vulputate. Dui id ornare arcu odio ut sem nulla
+      pharetra. Et malesuada fames ac turpis egestas sed. Sit amet venenatis urna cursus eget nunc scelerisque. Quis
+      commodo odio aenean sed. Nisi porta lorem mollis aliquam ut.</p>
+    <div class="map" style="height:100px">
+      <style>
+        .embed-container {
+          position: relative;
+          padding-bottom: 56.25%;
+          /* 16:9 Aspect Ratio */
+          height: 0;
+          overflow: hidden;
+          max-width: 100%;
+          border: 1px solid var(--darker);
+          /* Ensure var(--darker) is defined in your CSS or replace with a specific color */
+          border-radius: 20px;
+        }
+
+        .embed-container iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+        }
+      </style>
+      <div class="embed-container">
+        <iframe
+          src="https://arcgis.com/apps/Embed/index.html?webmap=67c2bbfe845446ada0f5432a19e4aa0f&extent=-168.0768,3.6039,-42.4811,61.6912&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light"
+          frameborder="0" scrolling="no" title="County Risk Indices" allowfullscreen>
+        </iframe>
       </div>
     </div>
+  </div>
 
 </body>
+
 </html>
