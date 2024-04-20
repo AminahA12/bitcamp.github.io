@@ -12,4 +12,6 @@ body{
   float: left;
   background-color: rbg(0, 0, 0);
   text-align: center;
+  padding: 15px 20px;
+  font-size: 20px;
 }
