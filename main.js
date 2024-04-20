@@ -1,5 +1,8 @@
 var categories = []
 
+window.onload = function() {
+    document.querySelector('.embed-container').style.opacity = '1';  // Set to opaque when the page is loaded
+  };
 $(document).ready(function() {
     $.ajax({
         type: "GET",
