@@ -6,7 +6,7 @@ window.onload = function() {
 $(document).ready(function() {
     $.ajax({
         type: "GET",
-        url: "data3.txt",
+        url: "data4.1.csv",
         dataType: "text",
         success: function(data) {processData(data);}
      });

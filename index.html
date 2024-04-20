@@ -14,25 +14,26 @@
     <a href="#hpi">Change In HPI</a>
     <a href="#hdd">Hurricane Disaster Declarations</a>
     <a href="#hri">Housing Risk Index</a>
+    <p class="bigtext">Our Page Name</p>
+    <div class="header">
+      <div class="autocomplete">
+        <input id="myInput" type="text" placeholder="Search Counties">
+        <script>
+          autocomplete(document.getElementById("myInput"), categories);
+          showAllCategoriesOnClick(document.getElementById("myInput"), categories);
+        </script>
+      </div>
+      <button id="submit">Submit</button>
+      <script>changePage(document.getElementById("submit"));</script>
+    </div>
   </div>
   <br><br><br><br><br><br>
-  <p class="bigtext">Our Page Name</p>
   <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-  <div class="header">
-    <div class="autocomplete">
-      <input id="myInput" type="text" placeholder="Search Counties">
-      <script>
-        autocomplete(document.getElementById("myInput"), categories);
-        showAllCategoriesOnClick(document.getElementById("myInput"), categories);
-      </script>
-    </div>
-    <button id="submit">Submit</button>
-    <script>changePage(document.getElementById("submit"));</script>
-  </div>
+  
   <div class="side-container">
     <p class="main-body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
       ut labore et dolore magna aliqua. Quis varius quam quisque id diam vel quam elementum. Gravida quis blandit turpis

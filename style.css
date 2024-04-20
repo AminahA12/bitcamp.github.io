@@ -22,9 +22,10 @@
 .bigtext {
   font-family: "Bebas Neue", sans-serif;
   text-align: center;
-  font-size: 60px;
+  font-size: 30px;
   margin: 0;
-  color: var(--dark);
+  color:  var(--con-light);
+  flex-grow: 1;
 }
 
 .main-body-text {
@@ -54,13 +55,11 @@ body {
 
 .header {
   display: flex;
-  justify-content: center;
-  margin-top: 10px;
+  margin-right: 5px;
 }
 
 .header input[type='text'] {
   font-family: "Bebas Neue", sans-serif;
-  width: min(400px, 80vw);
   font-size: larger;
   background-color: var(--lighter);
   border-color: var(--darker);
@@ -178,6 +177,9 @@ body {
   background-color: var(--con-dark);
   border-radius: 8px;
   padding: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .navbar a {
