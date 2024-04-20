@@ -5,10 +5,12 @@
   --mid: #5BA194;
   --light: #b5ffe1;
   --lighter: #5ba194;
+  --con-light: #DD9787;
+  --con-dark: #8B2635;
 }
 
 
-#myInput{
+#myInput {
   color: var(--dark);
 
 }
@@ -16,6 +18,7 @@
 ::placeholder {
   color: var(--dark);
 }
+
 .bigtext {
   font-family: "Bebas Neue", sans-serif;
   text-align: center;
@@ -37,17 +40,9 @@
   height: 100%
 }
 
-body{
+body {
   background-color: var(--light);
   font-family: "Times New Roman", Times, serif;
-}
-
-.navbar {
-  float: left;
-  background-color: rbg(0, 0, 0);
-  text-align: center;
-  padding: 15px 20px;
-  font-size: 20px;
 }
 
 .autocomplete {
@@ -85,24 +80,26 @@ body{
   border-bottom-left-radius: 0px;
 
 }
+
 .header button {
   font-family: "Bebas Neue", sans-serif;
   background-color: var(--light);
   border: none;
   border-radius: 8px;
   transition-property: filter, border;
-  transition: .3s cubic-bezier(.34,.01,.62,1.03);
+  transition: .3s cubic-bezier(.34, .01, .62, 1.03);
   border: 1px solid var(--lighter);
   border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;
 }
 
 .header button:hover {
-  transition: 0.5s cubic-bezier(.34,.01,.62,1.03);
+  transition: 0.5s cubic-bezier(.34, .01, .62, 1.03);
   transition-property: filter, border;
   filter: drop-shadow(0 0 3px var(--darker));
   border: 1px solid var(--darker);
 }
+
 .autocomplete-items {
   position: absolute;
   border-bottom: none;
@@ -122,17 +119,19 @@ body{
   border-left: 1px solid var(--dark);
   border-right: 1px solid var(--dark);
 }
+
 .autocomplete-items div:hover {
   /*when hovering an item:*/
   background-color: var(--light);
 }
+
 .autocomplete-active {
   /*when navigating through the items using the arrow keys:*/
   background-color: var(--light) !important;
   color: var(--mid);
 }
 
-.inputs{
+.inputs {
   display: flex;
   width: 50%;
   flex-direction: column;
@@ -166,7 +165,33 @@ body{
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
+}
+
+.navbar {
+  float: left;
+  text-align: center;
+  font-size: 20px;
+  background-color: var(--con-dark);
+  border-radius: 8px;
+  padding: 0px;
+}
+
+.navbar a {
+  font-family: "Bebas Neue", sans-serif;
+  float: left;
+  color: var(--con-light);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  border-radius: 8px;
+  background-color: var(--con-light);
+  color: var(--con-dark);
 }
