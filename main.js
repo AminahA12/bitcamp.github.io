@@ -215,7 +215,7 @@ function changePage(inp) {
         console.log(sorted_data);
         var fips = sorted_data[index][0].split(":")[1];
         var newURL = new URL("https://" + window.location.hostname + "/bitcamp.github.io/stats");
-        newURL.searchParams.append("fipes", fips);
+        newURL.searchParams.append("fips", fips);
         window.location.href = newURL;
     });
 }
