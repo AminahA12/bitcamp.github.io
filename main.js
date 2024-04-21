@@ -201,3 +201,7 @@ function changePage(inp) {
     });
 }
 
+
+$(function() {
+  $("#table").load("data4.2.3.html");
+});
