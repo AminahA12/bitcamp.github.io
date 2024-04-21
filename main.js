@@ -214,9 +214,9 @@ function changePage(inp) {
         console.log(index);
         console.log(sorted_data);
         var fips = sorted_data[index][0].split(":")[1];
-        window.location.href = "/bitcamp.github.io/stats/"
-        var params = new URLSearchParams(window.location.search)
-        params.append("fips", fips);
+        var newURL = new URL(window.location.hostname + "/bitcamp.github.io/stats");
+        newURL.searchParams.append("fipes", fips);
+        window.location.href = newURL;
     });
 }
 
