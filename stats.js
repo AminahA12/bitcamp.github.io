@@ -14,8 +14,13 @@ $(document).ready(function() {
             getData(data,fip);
 
             console.log(countyData);
-            document.getElementById('county').innerHTML = countyData[14];
-            
+            document.getElementById('county').innerHTML = "Data for " + countyData[14];
+            document.getElementById('disasters').innerHTML = "Total Natural Disasters, past 5 years: <br> Hurricanes: " + countyData[0] + " <br> Severe Storms: " + countyData[1] + " <br> Snowstorms: " + countyData[2] + " <br>Floods: " + countyData[3] + " <br>Tornadoes: " + countyData[4] + " <br>Mud/Landslides: " + countyData[5] + " <br>Fires: " + countyData[6];
+            document.getElementById('risk-rank').innerHTML = "Subsidized Housing Risk Rank: <br> " + countyData[7] + "<br> X <br> of <br> 3143 <br>";
+            document.getElementById('poverty-rate').innerHTML = countyData[8] + "%";
+            document.getElementById('ncome-properties-hpi').innerHTML = "Median household income: " + countyData[9] + " <br> Number of Federally Subsidized Properties: " + countyData[10] + " <br> Change in HPI, 2018-2022: " + countyData[11] + " <br>";
+            document.getElementById('2018').innerHTML = countyData[12];
+            document.getElementById('2022').innerHTML = countyData[13];
         }
      });
 });
