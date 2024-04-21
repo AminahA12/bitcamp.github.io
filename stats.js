@@ -20,21 +20,20 @@ function getData(allText,fipsCode) {
     for (var i=1; i<allTextLines.length; i++) {
         var line = allTextLines[i].split(',');
         if (line[0] == fipsCode) {
-            data.push(line[22]);
-            data.push(line[21]);
-            data.push(line[23]);
-            data.push(line[18]);
-            data.push(line[6]);
-            data.push(line[5]);
-            data.push(line[20]);
-            data.push(line[20]);
-            data.push(line[13]);
-            data.push(line[12]);
-            data.push(line[11]);
-            data.push(line[7]);
-            data.push(line[10]);
-            data.push(line[9]);
-            data.push(line[8]);
+            data.push(line[8]); //hurr
+            data.push(line[9]); //sev storm
+            data.push(line[10]); //snow
+            data.push(line[7]); //flood
+            data.push(line[11]); //torn
+            data.push(line[12]); //mud/land
+            data.push(line[13]); //fire
+            data.push(line[20]); //sub hous risk rank
+            data.push(line[15]); //pov rate
+            data.push(line[6]); //med income
+            data.push(line[18]); //num fed sub prop
+            data.push(line[23]); //delta hpi
+            data.push(line[21]); //hpi2108
+            data.push(line[22]); //hpi2022
             break;
         }
     }
