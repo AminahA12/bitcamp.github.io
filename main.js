@@ -1,5 +1,4 @@
 var categories = []
-var dataByFIPS = {};
 // 0:hurr, 1:sev. storm, 2:snowst, 3:flood, 4:torna, 5:mu/land, 6:fire, 7:sub hous risk rank, 8:pov rate, 9:med income, 10:num fed sub prop, 11:delta hpi, 12:hpi2018, 13:hpi 2022
 window.onload = function() {
     document.querySelector('.embed-container').style.opacity = '1';  // Set to opaque when the page is loaded
@@ -31,10 +30,8 @@ function processData(allText) {
     }
     for (var i=0;i<lines.length; i++) {
         categories.push(lines[i][3].split(':')[1]);
-        dataByFIPS[lines[i][0].split(':')[1]] = [lines[i][8].split(':')[1],lines[i][9].split(':')[1],lines[i][10].split(':')[1],lines[i][7].split(':')[1],lines[i][11].split(':')[1],lines[i][12].split(':')[1],lines[i][13].split(':')[1],lines[i][20].split(':')[1],lines[i][5].split(':')[1],lines[i][6].split(':')[1],lines[i][18].split(':')[1],lines[i][23].split(':')[1],lines[i][21].split(':')[1],lines[i][22].split(':')[1]];
     }
     categories.sort();
-    console.log(dataByFIPS);
 }
 
 
