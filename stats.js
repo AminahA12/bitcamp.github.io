@@ -13,6 +13,7 @@ $(document).ready(function() {
             var fip = urlParams.get('fips');
             getData(data,fip);
 
+            console.log(countyData);
             document.getElementById('county').innerHTML = data[14];
             
         }
