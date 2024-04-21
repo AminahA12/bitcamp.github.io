@@ -31,7 +31,7 @@ function processData(allText) {
     }
     for (var i=0;i<lines.length; i++) {
         categories.push(lines[i][3].split(':')[1]);
-        dataByFIPS[lines[i][0].split(':')[1]] = [lines[i][8].split(':')[1],lines[i][9].split(':')[1],lines[i][10].split(':')[1],lines[i][11].split(':')[1],lines[i][12].split(':')[1],lines[i][13].split(':')[1],lines[i][20].split(':')[1],lines[i][5].split(':')[1],lines[i][6].split(':')[1],lines[i][18].split(':')[1],lines[i][23].split(':')[1],lines[i][21].split(':')[1],lines[i][22].split(':')[1]];
+        dataByFIPS[lines[i][0].split(':')[1]] = [lines[i][8].split(':')[1],lines[i][9].split(':')[1],lines[i][10].split(':')[1]lines[i][7].split(':')[1],lines[i][11].split(':')[1],lines[i][12].split(':')[1],lines[i][13].split(':')[1],lines[i][20].split(':')[1],lines[i][5].split(':')[1],lines[i][6].split(':')[1],lines[i][18].split(':')[1],lines[i][23].split(':')[1],lines[i][21].split(':')[1],lines[i][22].split(':')[1]];
     }
     categories.sort();
     console.log(dataByFIPS);
