@@ -6,7 +6,7 @@ var countyData = [];
 $(document).ready(function() {
     $.ajax({
         type: "GET",
-        url: "data4.2.3.csv",
+        url: "/bitcamp.github.io/data4.2.3.csv",
         dataType: "text",
         success: function(data) {
             console.log('pageload');
