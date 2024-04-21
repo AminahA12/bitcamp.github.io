@@ -21,10 +21,10 @@ $(document).ready(function() {
             document.getElementById('disasters').innerHTML = "Natural Disasters, past 5 years: <br> Hurricanes: " + countyData[0] + " <br> Severe Storms: " + countyData[1] + " <br> Snowstorms: " + countyData[2] + " <br>Floods: " + countyData[3] + " <br>Tornadoes: " + countyData[4] + " <br>Mud/Landslides: " + countyData[5] + " <br>Fires: " + countyData[6];
             document.getElementById('risk-rank').innerHTML = "Subsidized Housing Risk Rank: <br> " + countyData[7] + "<br> of <br> 3143 <br>";
             document.getElementById('poverty-rate').innerHTML = (Math.round(countyData[8] * 100) / 10) + "%";
-            document.getElementById("poverty-rate").style.height = (Math.round(countyData[8] + .1) * 250)px;
+            document.getElementById("poverty-rate").style.height = (Math.round(countyData[8] + .1) * 250) + "px";
             document.getElementById('income-properties-hpi').innerHTML = "Median household income: " + countyData[9] + " <br> Number of Federally Subsidized Properties: " + countyData[10] + " <br> Change in HPI, 2018-2022: " + countyData[11] + " <br>";
             document.getElementById('2018').innerHTML = countyData[12];
-            document.getElementById("2018").style.height = (Math.round(countyData[12]/countyData[13]) * 200)px;
+            document.getElementById("2018").style.height = (Math.round(countyData[12]/countyData[13]) * 200) + "px";
             document.getElementById('2022').innerHTML = countyData[13];
         }
      });
