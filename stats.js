@@ -14,7 +14,7 @@ $(document).ready(function() {
             getData(data,fip);
 
             console.log(countyData);
-            document.getElementById('county').innerHTML = data[14];
+            document.getElementById('county').innerHTML = data.get(14);
             
         }
      });
