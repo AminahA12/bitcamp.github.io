@@ -24,7 +24,7 @@ $(document).ready(function() {
             document.getElementById("poverty-rate").style.height = (Math.round(countyData[8] + .1) * 250) + "px";
             document.getElementById('income-properties-hpi').innerHTML = "Median household income: " + countyData[9] + " <br> Number of Federally Subsidized Properties: " + countyData[10] + " <br> Change in HPI, 2018-2022: " + countyData[11] + " <br>";
             document.getElementById('2018').innerHTML = countyData[12];
-            document.getElementById("2018").style.height = (Math.round(countyData[12]/countyData[13]) * 200) + "px";
+            document.getElementById("2018").style.height = (Math.round(countyData[12]/countyData[13]) * 150) + "px";
             document.getElementById('2022').innerHTML = countyData[13];
         }
      });
