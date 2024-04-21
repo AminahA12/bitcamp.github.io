@@ -1,5 +1,6 @@
 var categories = []
-
+var dataByFIPS = {};
+// hurr, sev. storm, snowst, flood, torna, mu/land, fire, sub hous risk rank, pov rate, med income, num fed sub prop, delta hpi, hpi2018, hpi 2022
 window.onload = function() {
     document.querySelector('.embed-container').style.opacity = '1';  // Set to opaque when the page is loaded
   };
@@ -29,10 +30,11 @@ function processData(allText) {
         }
     }
     for (var i=0;i<lines.length; i++) {
-        categories.push(lines[i][3].split(':')[1])
+        categories.push(lines[i][3].split(':')[1]);
+        dataByFIPS[lines[i][0].split(':')[1]] = [lines[i][8].split(':')[1],lines[i][9].split(':')[1],lines[i][10].split(':')[1],lines[i][11].split(':')[1],lines[i][12].split(':')[1],lines[i][13].split(':')[1],lines[i][20].split(':')[1],lines[i][5].split(':')[1],lines[i][6].split(':')[1],lines[i][18].split(':')[1],lines[i][23].split(':')[1],lines[i][21].split(':')[1],lines[i][22].split(':')[1]];
     }
     categories.sort();
-    console.log(categories);
+    console.log(dataByFIPS.lines[i][3].split(':')[1]);
 }
 
 
