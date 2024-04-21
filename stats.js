@@ -8,11 +8,11 @@ $(document).ready(function() {
         type: "GET",
         url: "data4.2.3.csv",
         dataType: "text",
-        success: function(data) {getData("1001");}
+        success: function(data) {getData(data,"1001");}
      });
 });
 
-function getData(fipsCode) {
+function getData(allText,fipsCode) {
     var allTextLines = allText.split(/\r\n|\n/);
     var headers = allTextLines[0].split(',');
     var line = [];
