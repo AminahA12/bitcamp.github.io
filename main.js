@@ -241,7 +241,7 @@ var curr_index = 0;
 function move_left() {
   curr_index--;
   if (curr_index < 0) {
-    curr_index = 5;
+    curr_index = 4;
   }
   change_content();
 }
