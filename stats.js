@@ -16,7 +16,7 @@ $(document).ready(function() {
             getData(data,fip);
 
             console.log(countyData);
-            consolte.log("fip: " + fip);
+            console.log("fip: " + fip);
             document.getElementById('county').innerHTML = "Data for " + countyData[14];
             document.getElementById('disasters').innerHTML = "Natural Disasters, past 5 years: <br> Hurricanes: " + countyData[0] + " <br> Severe Storms: " + countyData[1] + " <br> Snowstorms: " + countyData[2] + " <br>Floods: " + countyData[3] + " <br>Tornadoes: " + countyData[4] + " <br>Mud/Landslides: " + countyData[5] + " <br>Fires: " + countyData[6];
             document.getElementById('risk-rank').innerHTML = "Subsidized Housing Risk Rank: <br> " + countyData[7] + "<br> of <br> 3143 <br>";
