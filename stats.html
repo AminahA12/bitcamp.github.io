@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+  <div class="navbar">
+    <a class="active" href="#home">Home</a>
+    <a href="#fahd">Federally Assisted Housing Distribution</a>
+    <a href="#hpi">Change In HPI</a>
+    <a href="#hdd">Hurricane Disaster Declarations</a>
+    <a href="#hri">Housing Risk Index</a>
+    <p class="bigtext">Our Page Name</p>
+    <div class="header">
+      <div class="autocomplete">
+        <input id="myInput" type="text" placeholder="Search Counties">
+        <script>
+          autocomplete(document.getElementById("myInput"), categories);
+          showAllCategoriesOnClick(document.getElementById("myInput"), categories);
+        </script>
+      </div>
+      <button id="submit">Submit</button>
+      <script>changePage(document.getElementById("submit"));</script>
+    </div>
+  </div>
+  <br><br><br><br><br><br>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div style="justify-content: center; display: flex;">
+    <div class="county-name">
+        Data for __________
+    </div>
+  </div>
+  <br><br><br>
+  <div style="justify-content: center; display: flex;">
+    <div class="stat-small">
+      <div>
+        Total Natural Disasters, past 5 years: <br>
+        Hurricanes: X <br>
+        Severe Storms: X <br>
+        Snowstorms: X <br>
+        Floods: X <br>
+        Tornadoes: X <br>
+        Mud/Landslides: X <br>
+        Fires: X <br>
+      </div>
+    </div>
+    <div class="stat">
+      Subsidized Housing Risk Rank: <br>
+      X <br>
+      of <br>
+      3143 <br>
+    </div>
+  </div>
+  <br>
+  <div style="display: flex; background-color: var(--con-light); border-radius: 8px;">
+    <div class="stat-lower" style="width: 30%; font-size: 40px">
+      <div style="width: 30%; height: 200px; margin-top: 20px; margin: auto;  position: relative">
+        <div class="bar" style="height: 50px;">
+          X%
+        </div>
+      </div>
+      POVERTY RATE
+    </div>
+    <div class="stat-lower" style="width:40%; font-size: 35px">
+      Median household income: X <br>
+      Number of Federally Subsidized Properties: X <br>
+      Change in HPI, 2018-2022: X <br>
+    </div>
+    <div class="stat-lower" style="width: 30%; font-size: 30px; display: inline; margin-bottom: 20px; margin-top: 20px;">
+      Housing Price Index, 2018 & 2022:
+      <div>
+        <div style="width: 30%; height: 200px; margin-top: 20px; float: left; margin-left: 10%; position: relative">
+          <div class="bar" style="height: 100px;">
+            X%
+          </div>
+        </div>
+        <div style="width: 30%; height: 200px; margin-top: 20px; float: right; margin-right:10%; position: relative">
+          <div class="bar" style="height: 200px;">
+            x%
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
