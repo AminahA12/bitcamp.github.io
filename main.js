@@ -32,7 +32,7 @@ function processData(allText) {
         categories.push(lines[i][3].split(':')[1])
     }
     categories.sort();
-    alert(lines);
+    // alert(lines);
 }
 
 
