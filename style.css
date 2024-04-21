@@ -155,9 +155,9 @@ body {
   border-color: var(--con-dark);
   background-color: var(--con-light);
   border-radius: 8px;
-  margin: 0px 24px;
+  margin: 0px 44px;
   gap: 44px;
-  min-height: 600px;
+  min-height: 650px;
 }
 
 .table {
