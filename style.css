@@ -160,6 +160,14 @@ body {
   animation: fadeIn 3s ease-out forwards;
 }
 
+.table {
+  animation: fadeIn 3s ease-out forwards;
+  text-align: center;
+  font-size: 20px;
+  color: var(--con-light);
+  background-color: var(--con-dark);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
