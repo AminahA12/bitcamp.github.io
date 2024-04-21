@@ -146,7 +146,7 @@ body {
 }
 
 .side-container {
-  display: block;
+  display: flex;
   flex-direction: row;
   opacity: 0;
   animation: fadeIn 3s ease-out forwards;
@@ -155,9 +155,9 @@ body {
   border-color: var(--con-dark);
   background-color: var(--con-light);
   border-radius: 8px;
-  margin: 0px 44px;
+  margin: 0px 24px;
   gap: 44px;
-  min-height: 424px;
+  min-height: 600px;
 }
 
 .table {
