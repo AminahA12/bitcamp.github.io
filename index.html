@@ -8,8 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="main.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="wrapper">
   <div class="navbar">
-    <p class="bigtext">Our Page Name</p>
+    <a href="/index.html"><img src="Home_free_icon.svg.png" alt="Home"></a>
+    <p class="bigtext">Housing Homies</p>
     <div class="header">
       <div class="autocomplete">
         <input id="myInput" type="text" placeholder="Search Counties">
@@ -22,23 +28,18 @@
       <script>changePage(document.getElementById("submit"));</script>
     </div>
   </div>
-  <br><br><br><br><br><br>
-  <link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
 
   <div class="side-container">
-    <p class="main-body-text">The map above shows which areas (at a county-level) have their respective housing markets
+    <button type="button" style="border-top-left-radius: 5px; border-bottom-left-radius: 5px" onclick="move_left()"><</button>
+    <p class="main-body-text">The map to the right shows which areas (at a county-level) have their respective housing markets
       most at risk to natural disasters and poverty. The risk index utilized incorporates and combines data regarding
-      the poverty rate and number of natural disasters that have occurred in each U.S. county.<br> <br>The map
+      the poverty rate and number of natural disasters that have occurred in each U.S. county.<br><br>The map
       highlights
       some major hotspots for housing market risk; Louisiana and northern
       Florida are the most
       evident ones. Other notable but lesser hotspots include southern Florida, North and South Carolina, and
       Mississippi. </p>
-    <div class="map" style="height:100px">
+      <div class="map" style="height:100px">
       <style>
         .embed-container {
           position: relative;
@@ -48,7 +49,6 @@
           overflow: hidden;
           max-width: 100%;
           border: 1px solid var(--darker);
-          /* Ensure var(--darker) is defined in your CSS or replace with a specific color */
           border-radius: 20px;
         }
 
@@ -61,21 +61,28 @@
           border-radius: 20px;
         }
       </style>
+      
       <div class="embed-container">
         <iframe
           src="https://arcgis.com/apps/Embed/index.html?webmap=67c2bbfe845446ada0f5432a19e4aa0f&extent=-168.0768,3.6039,-42.4811,61.6912&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light"
           frameborder="0" scrolling="no" title="County Risk Indices" allowfullscreen>
         </iframe>
       </div>
+      
     </div>
-  </div>
-  <br><br><br><br><br><br><br><br>
- <div class="table">
-   <br><br><br>
-    <p>All Data</p>
-<iframe width=100% height=700px src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSRiTEqjmNKdXsLChvTAEMk9oiFXksNcW3eqS6900K-dIRK25yPbnLB4ijEzaZYSbL617R0QoQoHrGQ/pubhtml?gid=957710505&amp;single=true&amp;widget=false&amp;headers=false&chrome=false"></iframe>
- </div>
 
+    <button type="button" style="border-top-right-radius: 5px; border-bottom-right-radius: 5px" onclick="move_right()">></button>
+  </div>
+ <div class="table">
+   <br>
+    <p class="bigtext">All Data</p>
+    <br>
+  <iframe width=100% height=700px src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSRiTEqjmNKdXsLChvTAEMk9oiFXksNcW3eqS6900K-dIRK25yPbnLB4ijEzaZYSbL617R0QoQoHrGQ/pubhtml?gid=957710505&amp;single=true&amp;widget=false&amp;headers=false&chrome=false"></iframe>
+ </div>
+ <div class="footer">
+  <p>John Paris •  •  • </p>
+  </div>
+  </div>
 </body>
 
 </html>

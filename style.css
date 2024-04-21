@@ -9,7 +9,6 @@
   --con-dark: #8B2635;
 }
 
-
 #myInput {
   color: var(--dark);
 
@@ -29,22 +28,22 @@
 }
 
 .main-body-text {
-  margin: 20px;
   width: 100%;
   font-size: 30px;
+  margin: 0px, 44px;
 }
 
 .map {
-  padding-right: 10;
-  padding-left: 10;
-  padding-top: 10px;
   width: 100%;
-  height: 100%
+  height: 100%;
+  margin: 44px 0px;  
 }
 
 body {
   background-color: var(--light);
   font-family: "Bebas Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .autocomplete {
@@ -56,7 +55,7 @@ body {
 
 .header {
   display: flex;
-  margin-right: 5px;
+  margin-right: 0;
 }
 
 .header input[type='text'] {
@@ -138,15 +137,7 @@ body {
   justify-content: center;
 }
 
-.embed-container {
-  position: relative;
-  padding-bottom: 80%;
-  min-height: 100%;
-  min-width: 100%;
-  border-style: solid;
-  border-radius: 20px;
-  border-color: var(--darker);
-}
+
 
 .embed-container iframe {
   width: 100%;
@@ -159,9 +150,22 @@ body {
   flex-direction: row;
   opacity: 0;
   animation: fadeIn 3s ease-out forwards;
+  border-style: solid;
+  border-width: 3px;
+  border-color: var(--con-dark);
+  background-color: var(--con-light);
+  border-radius: 8px;
+  margin: 0px 44px;
+  gap: 44px;
+  min-height: 424px;
 }
 
 .table {
+  margin: 0px 44px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: var(--con-dark);
+  border-radius: 8px;
   animation: fadeIn 3s ease-out forwards;
   text-align: center;
   font-size: 20px;
@@ -189,6 +193,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
+  height: 44px;
 }
 
 .county-name{
@@ -244,17 +249,52 @@ body {
 }
 
 .navbar a {
-  font-family: "Bebas Neue", sans-serif;
-  float: left;
   color: var(--con-light);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 8px;
+  border-color: var(--con-dark);
 }
 
 .navbar a:hover {
+  border-style: solid;
   border-radius: 8px;
+  border-width: 2px;
+  border-color: var(--con-light);
+  color: var(--con-dark);
+}
+
+img {
+  padding: 2px 6px;
+  width: 30px;
+  height: 30px;
+}
+
+.side-container button {
+  min-width: 44px;
+  background-color: var(--con-dark);
+  border-width: 0px;
+  color: var(--con-light);
+  font-size: 32px;
+}
+
+.side-container button:hover {
   background-color: var(--con-light);
   color: var(--con-dark);
+}
+
+.footer {
+  width: 100%;
+  background-color: var(--con-dark);
+  color: var(--con-light);
+  text-align: center;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 44px;
 }

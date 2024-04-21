@@ -9,56 +9,58 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="main.js"></script>
   <script src="stats.js"></script>
-  <div class="navbar">
-    <p class="bigtext">Our Page Name</p>
-    <div class="header">
-      <div class="autocomplete">
-        <input id="myInput" type="text" placeholder="Search Counties">
-        <script>
-          autocomplete(document.getElementById("myInput"), categories);
-          showAllCategoriesOnClick(document.getElementById("myInput"), categories);
-        </script>
-      </div>
-      <button id="submit">Submit</button>
-      <script>changePage(document.getElementById("submit"));</script>
-    </div>
-  </div>
-  <br><br><br><br><br><br>
   <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-  <div style="justify-content: center; display: flex;">
-    <div id="county" class="county-name">
-      Data for __________
-    </div>
-  </div>
-  <br><br><br>
-  <div style="justify-content: center; display: flex;">
-    <div id="disasters" class="stat-small">
-      <div>
-        Total Natural Disasters, past 5 years: <br>
-        Hurricanes: X <br>
-        Severe Storms: X <br>
-        Snowstorms: X <br>
-        Floods: X <br>
-        Tornadoes: X <br>
-        Mud/Landslides: X <br>
-        Fires: X <br>
+  <div class="wrapper">
+    <div class="navbar">
+      <a href="/index.html"><img src="Home_free_icon.svg.png" alt="Home"></a>
+      <p class="bigtext">Our Page Name</p>
+      <div class="header">
+        <div class="autocomplete">
+          <input id="myInput" type="text" placeholder="Search Counties">
+          <script>
+            autocomplete(document.getElementById("myInput"), categories);
+            showAllCategoriesOnClick(document.getElementById("myInput"), categories);
+          </script>
+        </div>
+        <button id="submit">Submit</button>
+        <script>changePage(document.getElementById("submit"));</script>
       </div>
     </div>
-    <div id="risk-rank" class="stat">
-      Subsidized Housing Risk Rank: <br>
-      X <br>
-      of <br>
-      3143 <br>
+  <div style="background-color: var(--con-light); border-radius: 8px; margin: 0px 44px; padding: 44px">
+    <div style="justify-content: center; display: flex;">
+      <div id="county" class="county-name">
+        Data for __________
+      </div>
+    </div>
+    <br><br><br>
+    <div style="justify-content: center; display: flex;">
+      <div id="disasters" class="stat-small">
+        <div>
+          Total Natural Disasters, past 5 years: <br>
+          Hurricanes: X <br>
+          Severe Storms: X <br>
+          Snowstorms: X <br>
+          Floods: X <br>
+          Tornadoes: X <br>
+          Mud/Landslides: X <br>
+          Fires: X <br>
+        </div>
+      </div>
+      <div id="risk-rank" class="stat">
+        Subsidized Housing Risk Rank: <br>
+        X <br>
+        of <br>
+        3143 <br>
+      </div>
     </div>
   </div>
-  <br>
-  <div style="display: flex; background-color: var(--con-light); border-radius: 8px;">
+  <div style="display: flex; background-color: var(--con-light); border-radius: 8px; margin: 0px 44px; padding: 44px;">
     <div class="stat-lower" style="width: 30%; font-size: 40px">
-      <div style="width: 30%; height: 200px; margin-top: 20px; margin: auto;  position: relative">
+      <div style="width: 30%; height: 200px; margin-top: 20px; margin: auto; position: relative">
         <div id="poverty-rate" class="bar" style="height: 50px;">
           X%
         </div>
@@ -71,7 +73,7 @@
       Change in HPI, 2018-2022: X <br>
     </div>
     <div class="stat-lower"
-      style="width: 30%; font-size: 30px; display: inline; margin-bottom: 20px; margin-top: 20px;">
+      style="width: 30%; font-size: 30px; display: inline;">
       Housing Price Index, 2018 & 2022:
       <div>
         <div style="width: 30%; height: 200px; margin-top: 20px; float: left; margin-left: 10%; position: relative">
@@ -86,6 +88,10 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="footer">
+    <p>John Paris •  •  • </p>
+  </div>
   </div>
 </body>
 

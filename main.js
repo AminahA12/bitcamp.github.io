@@ -1,4 +1,6 @@
 var categories = []
+var sorted_data = []
+
 // 0:hurr, 1:sev. storm, 2:snowst, 3:flood, 4:torna, 5:mu/land, 6:fire, 7:sub hous risk rank, 8:pov rate, 9:med income, 10:num fed sub prop, 11:delta hpi, 12:hpi2018, 13:hpi 2022
 window.onload = function() {
     document.querySelector('.embed-container').style.opacity = '1';  // Set to opaque when the page is loaded
@@ -30,8 +32,29 @@ function processData(allText) {
     }
     for (var i=0;i<lines.length; i++) {
         categories.push(lines[i][3].split(':')[1]);
+        sorted_data.push(lines[i]);
     }
     categories.sort();
+    sorted_data.sort(function(a, b) {
+      var nameA = a[3].toUpperCase(); // Convert to uppercase to ensure case-insensitive comparison
+      var nameB = b[3].toUpperCase(); // Convert to uppercase for comparison
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+    
+      // names must be equal
+      return 0;
+    });
+}
+
+function sortNestedList(nestedList) {
+  nestedList.sort(function(a, b) {
+    return a[3] - b[3];
+  });
+  return nestedList;
 }
 
 
@@ -184,23 +207,56 @@ function showAllCategoriesOnClick(inp, arr) {
 
 function changePage(inp) {
     inp.addEventListener("click", function() {
-        var input = document.getElementById("myInput").value.toLowerCase();
-        if (input === "can") {
-            window.location.href = "/cans"
-        }
-        if (input === "plastic") {
-            window.location.href = "/plastic"
-        }
-        if (input === "paper") {
-            window.location.href = "/paper"
-        }
-        if (input === "glass") {
-            window.location.href = "/glass"
-        }
+        var input = document.getElementById("myInput").value
+        console.log(input);
+        var index = categories.indexOf(input);
+        console.log(categories);
+        console.log(index);
+        console.log(sorted_data);
+        var fips = sorted_data[index][0].split(":")[1];
+        window.location.href = "/stats.html?fips="+fips;
     });
 }
 
+var texts = [
+  "The map to the right shows which areas (at a county-level) have their respective housing markets most at risk to natural disasters and poverty. The risk index utilized incorporates and combines data regarding the poverty rate and number of natural disasters that have occurred in each U.S. county. \r\n\r\n The map highlights some major hotspots for housing market risk; Lousiana and northern Florida are the most evident ones. Other notable but lesser hotspots include southern Florida, North and South Carolina, and Missisippi.",
+  "This map details areas of federally-assisted housing by quantity on a county level. \r\n\r\n Overall, federally-assisted rental housing appears in much higher concentrations for the top 4 counties compared to the rest - New York County at 114,167 homes, Bronx County at 111,768 homes, Los Angeles County at 108,388 homes, and Cook County at 92,983 homes respectively. The next highest county is Harris County at 60,733 homes, with a sizable negative margin of -32,250 homes compared to Cook County.",
+  "This map showcases the percent change in housing price index (HPI) by county from 2018 to 2022. \r\n\r\n On a state level, Florida counties have experienced the highest change in HPI on average. From a broader perspective though, there is a clear hotspot for HPI change which includes Tennessee, northern Georgia, and the westmost of North Carolina. On average, counties on the west of the U.S. experienced a higher change in HPI than counties on the east of the U.S.",
+  "The map to the right measures counties by number of hurricane disaster declarations from 2018-2022. \r\n\r\n The counties that have experienced hurricane disaster declarations are mostly concentrated in the southeast of the country, with Louisiana having the most declarations by a fair margin.",
+  "This map measures counties based on a Housing Risk Index, calculated by taking the number of federally assisted rental homes multiplied by the total number of disasters and computing the log of this value. \r\n\r\n Areas of most notable risk based on this index are Florida, California, Louisiana, and the general northeast of New England."
+]
 
+var maps = [
+  ["//none6cf7dfe0feaf.maps.arcgis.com/apps/Embed/index.html?webmap=67c2bbfe845446ada0f5432a19e4aa0f&extent=-168.0768,3.6039,-42.4811,61.6912&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light", "County Risk Indices"],
+  ["//none6cf7dfe0feaf.maps.arcgis.com/apps/Embed/index.html?webmap=4815a801b10b4cedbb905764934eae8c&extent=-144.3903,-5.482,-49.82,57.0183&home=true&zoom=true&previewImage=false&scale=true&legend=true&disable_scroll=true&theme=light", "US Federally Assisted Housing Distribution"],
+  ["//none6cf7dfe0feaf.maps.arcgis.com/apps/Embed/index.html?webmap=7d561f37ca02424490ba5aebf9d4610e&extent=-142.5446,10.0149,-47.9743,64.5685&home=true&zoom=true&previewImage=false&scale=true&search=true&searchextent=false&legend=true&disable_scroll=true&theme=light", "Change in HPI by County, 2018-2022"],
+  ["//none6cf7dfe0feaf.maps.arcgis.com/apps/Embed/index.html?webmap=dc6f8795ca074634b64cdcc85eb7c30c&extent=-99.1039,24.914,-67.705,40.6537&home=true&zoom=true&previewImage=false&scale=true&search=true&searchextent=true&legend=true&disable_scroll=true&theme=light","Hurricane Disaster Declarations by County, 2018-22"],
+  ["//none6cf7dfe0feaf.maps.arcgis.com/apps/Embed/index.html?webmap=3fac09100d5049b38829b04919a2a2c4&extent=-144.3024,6.6237,-49.7321,63.0562&home=true&zoom=true&previewImage=false&scale=true&search=true&searchextent=true&legend=true&disable_scroll=true&theme=light","Housing Risk Index by County"]
+]
+
+var curr_index = 0;
+
+function move_left() {
+  curr_index--;
+  if (curr_index < 0) {
+    curr_index = 5;
+  }
+  change_content();
+}
+
+function move_right() {
+  curr_index++;
+  if (curr_index > 4) {
+    curr_index = 0;
+  }
+  change_content();
+}
+
+function change_content() {
+  document.getElementsByClassName("main-body-text")[0].innerText = texts[curr_index];
+  document.getElementsByTagName("iframe")[0].src = maps[curr_index][0]
+  document.getElementsByTagName("iframe")[0].title = maps[curr_index][1]
+}
 $(function() {
   $("#table").load("Data.html");
 });
