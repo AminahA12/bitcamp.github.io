@@ -182,6 +182,58 @@ body {
   align-items: center;
 }
 
+.county-name{
+  justify-content: center;
+  max-width:50%;
+  width: fit-content;
+  font-size: 60px;
+  font-family: "Bebas Neue";
+  color: var(--con-light);
+  background-color: var(--con-dark);
+  border-radius: 8px;
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.stat{
+  display: inline-flex; 
+  width: 50%; 
+  justify-content: center; 
+  text-align: center; 
+  font-family: 'Bebas Neue'; 
+  font-size: 50px;
+}
+
+.stat-small {
+  display: inline-flex; 
+  width: 50%; 
+  justify-content: center; 
+  text-align: left; 
+
+  font-family: 'Bebas Neue'; 
+  font-size: 30px;
+}
+
+.stat-lower {
+  justify-content: center; 
+  margin: auto; 
+  text-align: center; 
+  font-family: 'Bebas Neue';
+}
+
+.bar{
+  background-color: var(--con-dark); 
+  width: 100%;
+  border-radius: 8px; 
+  position: absolute; 
+  bottom: 0; 
+  margin: auto; 
+  color: var(--con-light); 
+  font-size: 30px;
+}
+
 .navbar a {
   font-family: "Bebas Neue", sans-serif;
   float: left;
