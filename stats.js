@@ -8,7 +8,11 @@ $(document).ready(function() {
         type: "GET",
         url: "data4.2.3.csv",
         dataType: "text",
-        success: function(data) {getData(data,"1001");}
+        success: function(data) {
+            var urlParams = new URLSearchParams(window.location.search);
+            var fip = urlParams.get('fips');
+            getData(data,fip);
+        }
      });
 });
 
